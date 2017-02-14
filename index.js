@@ -16,3 +16,6 @@ function bb() {
 function cc(){
     console.log("我是分支里面的完整版本");
 }
+function dd(){
+    console.log("我是默认分支里面的功能四");
+}
