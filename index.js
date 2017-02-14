@@ -24,3 +24,7 @@ function dd() {
 function ee() {
     console.log('我是一个想要传到github里的功能');
 }
+
+function ff(){
+    console.log('我也不知道我是什么');
+}
