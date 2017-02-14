@@ -19,4 +19,5 @@ function cc(){
 
 function dd(){
     console.log("我是第四个功能的一半呢");
+    console.log("这下我是完成的功能四了");
 }
