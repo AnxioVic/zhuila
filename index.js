@@ -8,3 +8,7 @@
 function aa(){
     console.log("哈哈哈");
 }
+
+function bb() {
+    console.log("我是一个分支，怎么办");
+}
