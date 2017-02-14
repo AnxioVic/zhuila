@@ -32,3 +32,7 @@ function ff(){
 function gg() {
     console.log('我只是一个测试');
 }
+
+function hh() {
+    console.log('重新绑定后的缩写');
+}
