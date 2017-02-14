@@ -12,3 +12,7 @@ function aa(){
 function bb() {
     console.log("我是一个分支，怎么办");
 }
+
+function cc(){
+    console.log("我是分支里面的完整版本");
+}
