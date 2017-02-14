@@ -28,3 +28,7 @@ function ee() {
 function ff(){
     console.log('我也不知道我是什么');
 }
+
+function gg() {
+    console.log('我只是一个测试');
+}
