@@ -16,3 +16,7 @@ function bb() {
 function cc(){
     console.log("我是分支里面的完整版本");
 }
+
+function dd(){
+    console.log("我是第四个功能的一半呢");
+}
