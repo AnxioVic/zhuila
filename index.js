@@ -36,3 +36,7 @@ function gg() {
 function hh() {
     console.log('重新绑定后的缩写');
 }
+
+function jj() {
+    console.log('使用SSH加密');
+}
