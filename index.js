@@ -47,6 +47,11 @@ function j() {
 function jjj() {
     console.log('添加SSH加密地址缩写储存');
 }
+<<<<<<< HEAD
 function jjjj() {
     console.log('我提交了一个更新的jjjj，看看哈哈哈');
+=======
+function jjjj(){
+	console.log('我提交了一个更新的jjjj，看看哈哈哈');
+>>>>>>> 5a9f88fa0ee771eb8f067d82726d37b05ba48554
 }
