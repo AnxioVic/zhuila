@@ -40,3 +40,7 @@ function hh() {
 function jj() {
     console.log('使用SSH加密');
 }
+
+function j() {
+    console.log('再次测试SSH是否添加完成');
+}
