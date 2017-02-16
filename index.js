@@ -44,3 +44,6 @@ function jj() {
 function j() {
     console.log('再次测试SSH是否添加完成');
 }
+function jjj() {
+    console.log('添加SSH加密地址缩写储存');
+}
