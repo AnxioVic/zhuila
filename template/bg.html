@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>业务线索-客户总表--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all"/>
+    <link rel="stylesheet" href="../css/public.css" media="all"/>
+    <link rel="stylesheet" href="../css/common.css" media="all"/>
+    <style>
+
+
+        .khzbBody .li-pding-1 {
+            padding: 0 1px !important;
+        }
+
+        .layui-btn {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .khzbBody .layui-tab-title .layui-btn {
+            background-color: #eee;
+            color: #666;
+        }
+
+        .khzbBody .layui-this > .layui-btn {
+            background-color: #009688 !important;
+            color: #fff !important;
+        }
+
+        .layui-tab-title li:hover a {
+            background-color: #5FB878;
+        }
+
+        /*===*/
+
+        .layui-nav-child {
+            top: -20px;
+            right: -8px;
+        }
+
+        .layui-nav {
+            display: inline-block;
+            padding: 0;
+        }
+
+        .layui-bg-fff {
+            background-color: #fff;
+        }
+
+        .layui-bg-fff:hover {
+            background-color: #f2f2f2;
+        }
+
+        .layui-nav .layui-nav-item {
+            line-height: 0;
+        }
+
+        .layui-nav .layui-nav-item > a {
+            padding: 0 10px !important;
+        }
+
+        .layui-nav-bar {
+            display: none;
+        }
+
+        .layui-bg-fff .layui-nav-child .pading-0 {
+            padding: 0;
+        }
+
+        .bgcf {
+            background-color: #fff;
+        }
+
+        .layui-bg-fff .layui-nav-child .bgcf:hover {
+            background-color: #009688;
+            color: #fff;
+        }
+
+        .layui-layer-tips .layui-table-tips {
+            display: none;
+        }
+
+        .laytable-cell-1-8 {
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .khzb-gn-btns ul {
+            padding: 0 5px 10px 5px;
+        }
+
+        .khzb-gn-btns li {
+            display: inline-block;
+        }
+
+        .khzb-gn-btns .btn-br-5 {
+            border-radius: 5px;
+        }
+
+        .khzb-gn-btns li .btn-khzb {
+            height: 34px;
+            line-height: 34px;
+            padding: 0 22px;
+            border-color: #009688;
+        }
+
+        .layui-form-onswitch {
+            background-color: #009688 !important;
+            border-color: #009688 !important;
+        }
+
+        .layui-table-cell:hover {
+            text-decoration:underline;
+            color: #009688;
+        }
+    </style>
+</head>
+<body class="khzbBody">
+<!--<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">-->
+    <!--<ul class="layui-tab-title">-->
+        <!--<li class="li-pding-1 layui-this">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>全部（15）</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>今日应联系</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>今日新增</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>今日跟进</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>7天内跟进</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>7天内未跟进</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>30天内未跟进</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<div class="layui-tab-content">-->
+        <!--<div class="layui-tab-item layui-show">-->
+            <div class="khzb-gn-btns">
+                <ul>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb addNews_btn">录入</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">分配</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">解除</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">转单</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">移交</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">废单</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">短信</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">沟通</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">资料</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">导入</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-url="http://fly.layui.com/case/u/3198216" target="_blank">
+                            <button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">导出</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <form class="layui-form">
+                <blockquote class="layui-elem-quote quoteBox">
+                    <form class="layui-form">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input searchVal" placeholder="客户名称/电话/其他关键词"/>
+                            </div>
+                            <div style="display: inline-block;vertical-align: middle;">
+                                <label class="layui-form-label">跟单部门</label>
+                                <div class="layui-input-block" style="width: 100px;">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">所有部门</option>
+                                        <option value="0">业务一部</option>
+                                        <option value="1" selected>业务二部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="display: inline-block;vertical-align: middle;">
+                                <div class="layui-input-block" style="width: 100px; margin-left: 0;">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">全部员工</option>
+                                        <option value="0">张三</option>
+                                        <option value="1" selected>李四</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="display: inline-block;vertical-align: middle;">
+                                <label class="layui-form-label">呼叫状态</label>
+                                <div class="layui-input-block" style="width: 100px;">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">全部状态</option>
+                                        <option value="0">未访问</option>
+                                        <option value="1" selected>已访问</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="display: inline-block;vertical-align: middle;">
+                                <label class="layui-form-label">客户类型</label>
+                                <div class="layui-input-block" style="width: 100px;">
+                                    <select name="city" lay-verify="required">
+                                        <option value="">所有类型</option>
+                                        <option value="0">业务一部</option>
+                                        <option value="1" selected>业务二部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="display: inline-block;vertical-align: middle;">
+                                <label class="layui-form-label">跟单状态</label>
+                                <div class="layui-input-block" style="width: 100px;">
+                                    <select name="city" lay-verify="required">
+                                        <option value=""></option>
+                                        <option value="0">已沟通</option>
+                                        <option value="1" selected>预约面谈</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <a class="layui-btn highlight-bgc btn-br-5 khzb-search" data-type="reload">搜索</a>
+                        </div>
+                        <!--<div class="layui-inline">-->
+                            <!--<a class="layui-btn layui-btn-primary btn-br-5 addNews_btn" data-url="page/news/newsAdd.html">-->
+                                <!--<i class="seraph icon-text" data-icon="icon-text"></i>-->
+                                <!--<cite>添加文章</cite>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                        <div class="layui-inline">
+                            <a class="layui-btn layui-btn-primary btn-br-5 delAll_btn">批量删除</a>
+                        </div>
+                        <div class="layui-inline" style="float: right;vertical-align: middle;">
+                            <i class="layui-anim layui-icon" style="width: 40px;height: 40px;line-height: 36px;font-size: 40px !important;" data-icon="&#xe620;">&#xe620;</i>
+                        </div>
+                    </form>
+                </blockquote>
+                <table id="newsList" lay-filter="newsList"></table>
+                <!--审核状态-->
+                <script type="text/html" id="newsStatus">
+                    {{#  if(d.newsStatus == "1"){ }}
+                    <span class="highlight-text">等待审核</span>
+                    {{#  } else if(d.newsStatus == "0"){ }}
+                    <span class="layui-blue">已存草稿</span>
+                    {{#  } else { }}
+                    审核通过
+                    {{#  }}}
+                </script>
+
+                <!--操作-->
+                <script type="text/html" id="newsListBar">
+                    <ul class="layui-nav layui-bg-fff" lay-filter="">
+                        <li class="layui-nav-item">
+                            <a href="javascript:;" class="layui-icon" style="color: #000;">&#xe65f;</a>
+                            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                                <dd><a class="layui-btn layui-btn-xs bgcf pading-0" lay-event="edit">编辑</a></dd>
+                                <dd><a class="layui-btn layui-btn-xs bgcf pading-0" lay-event="look">查看</a></dd>
+                                <dd><a class="layui-btn layui-btn-xs bgcf pading-0" lay-event="del">删除</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </script>
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd><a class="layui-btn layui-btn-xs bgcf" lay-event="edit">编辑</a></dd>-->
+                <!--<dd><a class="layui-btn layui-btn-xs bgcf" lay-event="look">查看</a></dd>-->
+                <!--<dd><a class="layui-btn layui-btn-xs bgcf" lay-event="del">删除</a></dd>-->
+                <!--</dl>-->
+            </form>
+        <!--</div>-->
+        <!--<div class="layui-tab-item">今日应联系</div>-->
+        <!--<div class="layui-tab-item">今日新增</div>-->
+        <!--<div class="layui-tab-item">今日跟进过</div>-->
+        <!--<div class="layui-tab-item">7天内跟进过</div>-->
+        <!--<div class="layui-tab-item">7天内未跟进</div>-->
+        <!--<div class="layui-tab-item">30天未跟进</div>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript" src="../common/jquery.js"></script>
+<script type="text/javascript" src="../common/tools.js"></script>
+<script type="text/javascript" src="../common/common.js"></script>
+<!--<script type="text/javascript" src="main.js"></script>-->
+<script>
+    layui.config({
+        base : "../js/"
+    }).extend({
+        "bodyTab" : "bodyTab"
+    })
+
+    layui.use(['form','layer','laydate','table','laytpl','element','bodyTab'],function(){
+        var form = layui.form,
+            layer = parent.layer === undefined ? layui.layer : top.layer,
+//            $ = layui.jquery,
+            laydate = layui.laydate,
+            laytpl = layui.laytpl,
+            table = layui.table;
+        var tab = layui.bodyTab({
+            openTabNum : "50",  //最大可打开窗口数量
+            url : "json/navs.json" //获取菜单json地址
+        });
+
+        //列表
+        var tableIns = table.render({
+            elem: '#newsList',
+            url : '../json/newsList.json',
+            cellMinWidth : 95,
+            page : true,
+            height : 705,
+            limit : 50,
+            limits : [10,15,20,25,50,100],
+            id : "ListTable",
+            cols : [[
+                {type: "checkbox", width:50},
+                {field: 'newsId', title: 'ID', width:80, align:"center"},
+                {field: 'newsName', title: '文章标题', width:350},
+                {field: 'newsAuthor', title: '发布者', align:'center'},
+                {field: 'newsStatus', title: '发布状态',  align:'center',templet:"#newsStatus"},
+                {field: 'newsLook', title: '浏览权限', align:'center'},
+                {field: 'newsTop', title: '是否置顶', align:'center', templet:function(d){
+                    return '<input type="checkbox" name="newsTop" lay-filter="newsTop" lay-skin="switch" lay-text="是|否" '+d.newsTop+'>'
+                }},
+                {field: 'newsTime', title: '发布时间', align:'center', minWidth:110, templet:function(d){
+                    return d.newsTime.substring(0,10);
+                }},
+                {title: '操作', width:70, templet:'#newsListBar',fixed:"right",align:"center"}
+            ]],
+            done: function(res, curr, count){
+                $(".layui-table-fixed-r")[0].classList += " layui-hide";
+                $(".layui-bg-fff").on("mouseover",function () {
+                    this.offsetParent.classList.remove("layui-table-cell");
+                    this.children[0].children[1].classList.add("layui-show");
+                })
+
+                $(".layui-nav-child").on("mouseout",function () {
+                    this.classList.remove("layui-show");
+                })
+
+                $("tr").on("click",function () {
+                    $(this).find(".layui-form-checkbox").toggleClass("layui-form-checked");
+                })
+
+                $("td[data-field = newsName]").on("click",function () {
+                    tools.openWindow({title:"客户详情",url:"./add.html"});
+                })
+            }
+        });
+
+
+
+        //是否置顶
+        form.on('switch(newsTop)', function(data){
+            var index = layer.msg('修改中，请稍候',{icon: 16,time:false,shade:0.8});
+            setTimeout(function(){
+                layer.close(index);
+                if(data.elem.checked){
+                    layer.msg("置顶成功！");
+                }else{
+                    layer.msg("取消置顶成功！");
+                }
+            },500);
+        })
+
+        //搜索【此功能需要后台配合，所以暂时没有动态效果演示】
+        $(".search_btn").on("click",function(){
+            if($(".searchVal").val() != '') {
+                Search();
+            };
+        });
+
+        $(".addNews_btn").click(function(){
+            tools.openWindow({title:"录入客户",url:"./add.html"})
+//            addNews();
+        })
+
+        //批量删除
+        $(".delAll_btn").click(function(){
+            var checkStatus = table.checkStatus('ListTable'),
+                data = checkStatus.data,
+                newsId = [];
+            console.log(data);
+            if(data.length > 0) {
+                for (var i in data) {
+                    newsId.push(data[i].newsId);
+                    console.log(newsId);
+                }
+                layer.confirm('确定批量删除选中项？', {icon: 3, title: '提示信息'}, function (index) {
+
+                    var url = comm.getHost() + '/url/';
+                    var data = {Id :newsId};
+                    comm.post(url, data, function (data) {
+                        if (data.state == "y") {
+                            tableIns.reload();
+                        } else {
+                            comm.warning(2);
+                        }
+                    });
+                })
+            }else{
+                // layer.msg('<span class="layui-icon" style="color: pink;">&#xe618;</span>请选择需要删除的文章');
+                tools.msg("请选择要删除的","red",'&#x1005;',{offset:'6%'})
+            }
+        })
+
+        //列表操作
+        table.on('tool(newsList)', function(obj){
+            console.log(obj);
+            var layEvent = obj.event,
+                data = obj.data;
+            console.log(obj.data);
+
+            if(layEvent === 'edit'){ //编辑
+//                addNews(data);
+                tools.openWindow({title:"编辑客户",url:"./add.html"})
+            } else if(layEvent === 'del'){ //删除
+
+                layer.confirm('确定删除？',{icon:3, title:'提示信息'},function(index){
+                    var url = comm.getHost() + '/url/';
+                    var data = {Id :obj.data.newsId};
+                    comm.post(url, data, function (data) {
+                        if (data.state == "y") {
+                            tableIns.reload();
+//                            layer.close(index);
+                        } else {
+                            comm.warning(2);
+                        }
+                    });
+
+                });
+            } else if(layEvent === 'look'){ //预览
+                // layer.alert("此功能需要前台展示，实际开发中传入对应的必要参数进行文章内容页面访问")
+                tools.openWindow({title:"客户详情",url:"./add.html"})
+            }
+        });
+
+
+        function Search() {
+            var param = "?";
+            param += "Mark=-1";
+            if ($("#txtCustomer").val() != "客户名称|联系电话") {
+                param += "&txtCustomer=" + $("#txtCustomer").val();
+            }
+            if ($("#txtTitle").val() != "单据名称|单据编号") {
+                param += "&txtTitle=" + $("#txtTitle").val();
+            }
+            if ($.trim($("input[name='ddlOrderType']").val()) != "0") {
+                param += "&ddlOrderType=" + $("input[name='ddlOrderType']").val();
+            }
+            if ($.trim($("input[name='ddlState']").val()) != "0") {
+                param += "&ddlState=" + $("input[name='ddlState']").val();
+            }
+            if ($.trim($("input[name='ddlPayType']").val()) != "0") {
+                param += "&ddlPayType=" + $("input[name='ddlPayType']").val();
+            }
+            if ($.trim($("input[name='ddlAccounType']").val()) != "0") {
+                param += "&ddlAccounType=" + $("input[name='ddlAccounType']").val();
+            }
+            if ($.trim($("input[name='ddlAccounId']").val()) != "0") {
+                param += "&ddlAccounId=" + $("input[name='ddlAccounId']").val();
+            }
+            if ($("input[name='txtStime']").val() != "") {
+                param += "&txtStime=" + $("input[name='txtStime']").val();
+            }
+            if ($("input[name='txtEtime']").val() != "") {
+                param += "&txtEtime=" + $("input[name='txtEtime']").val();
+            }
+            if ($.trim($("input[name='ddlXsId']").val()) != "0") {
+                param += "&ddlXsId=" + $("input[name='ddlXsId']").val();
+            }
+            if ($.trim($("input[name='ddlSsId']").val()) != "0") {
+                param += "&ddlSsId=" + $("input[name='ddlSsId']").val();
+            }
+            if ($.trim($("input[name='ddlIsYj']").val()) != "-1") {
+                param += "&ddlIsYj=" + $("input[name='ddlIsYj']").val();
+            }
+            return param.toString();
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

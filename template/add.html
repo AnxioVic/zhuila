@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>文章列表--layui后台管理模板 2.0</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../layui/css/layui.css" media="all" />
+    <!--<link rel="stylesheet" href="../../css/public.css" media="all" />-->
+    <style>
+        .detailsBody .li-pding-1 {
+            padding:0 1px !important;
+        }
+        .layui-btn {
+            border-radius: 5px 5px 0 0;
+        }
+        .detailsBody .layui-btn {
+            background-color: #eee;
+            color: #666;
+        }
+        .detailsBody .layui-this > .layui-btn {
+            background-color: #009688!important;
+            color: #fff!important;
+        }
+
+    </style>
+</head>
+<body class="detailsBody">
+
+<!--<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">-->
+    <!--<ul class="layui-tab-title">-->
+        <!--<li class="li-pding-1 layui-this">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>基本资料</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>发展历程</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>跟踪简报</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li class="li-pding-1">-->
+            <!--<a class="layui-btn">-->
+                <!--<cite>项目详情</cite>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<div class="layui-tab-content">-->
+        <!--<div class="layui-tab-item layui-show">-->
+            <form class="layui-form" action="">
+                <div class="layui-row">
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户名称</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">联系电话</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="18888888888"   lay-verify="required" placeholder="请输入电话" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">性别</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required" disabled>
+                                    <option value=""></option>
+                                    <option value="0" selected>男</option>
+                                    <option value="1">女</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">跟单部门</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required" disabled>
+                                    <option value=""></option>
+                                    <option value="0">业务一部</option>
+                                    <option value="1" selected>业务二部</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">跟单员工</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required" disabled>
+                                    <option value=""></option>
+                                    <option value="0">张三</option>
+                                    <option value="1">李四</option>
+                                    <option value="2" selected>王二</option>
+                                    <option value="3">六六</option>
+                                    <option value="4">巴巴</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">推广来源</label>
+                            <div class="layui-input-block">
+                                <select name="city" lay-verify="required" disabled>
+                                    <option value=""></option>
+                                    <option value="0">百度</option>
+                                    <option value="1">搜狐</option>
+                                    <option value="2">360</option>
+                                    <option value="3">鲁大师</option>
+                                    <option value="4" selected>今日头条</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">站点来源</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="百度：https://baidu.ss.com/4116"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">录入时间</label>
+                            <div class="layui-input-block">
+                                <div  id="test2" class="layui-input" style="height: 36px;line-height: 36px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;"></div>
+                                <!--<input type="text" name="title" required disabled value=""  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性6</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性7</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性8</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性9</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性10</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性11</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性12</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性13</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性14</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">客户属性15</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" required disabled value="李逵"  lay-verify="required" placeholder="请输入客户名称" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">备注</label>
+                            <div class="layui-input-block">
+                                <textarea name="desc" disabled  placeholder="请输入内容" class="layui-textarea">我是黑旋风李逵</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+<button class="layui-btn layui-btn-primary btn-br-5 btn-khzb" id="btnSubmit">提交</button>
+<button class="layui-btn layui-btn-primary btn-br-5 btn-khzb">关闭</button>
+        <!--</div>-->
+        <!--<div class="layui-tab-item">内容2</div>-->
+        <!--<div class="layui-tab-item">内容3</div>-->
+        <!--<div class="layui-tab-item">内容4</div>-->
+    <!--</div>-->
+<!--</div>-->
+<script type="text/javascript" src="../layui/layui.js"></script>
+<script type="text/javascript" src="../common/tools.js"></script>
+<script type="text/javascript" src="../common/common.js"></script>
+
+
+<!--<script type="text/javascript" src="details.js"></script>-->
+<script>
+    layui.use(['element','form','laydate'], function(){
+        var element = layui.element,$ = layui.jquery;
+
+        //监听提交
+        layui.form.on('submit(formDemo)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+
+
+        $("#btnSubmit").click(function () {
+                var url = comm.getHost() + '/url/';
+                var data = $.serializeObject($('form'));
+                data.Content = escape(data.Content);
+                comm.post(url, data, function (data) {
+                    if (data.state == "y") {
+                        comm.alertMsg(1);
+                        comm.closeRefreshTreeGrid("TaskEdit");
+                    } else {
+                        comm.warning(2);
+                    }
+                });
+        });
+
+
+        $(".layui-input-block").on("click",function () {
+            console.log($(this)[0].children);
+            $(this)[0].children[0].disabled =false;
+        });
+
+        $("input").on("blur",function () {
+            $(this)[0].disabled =true;
+        });
+
+        layui.laydate.render({
+            elem: '#test2',
+            type: 'datetime',
+            format:'yyyy-MM-dd HH:mm:ss',
+            value: new Date(1534766888000),
+            zIndex: 99999999,
+            change: function(value, date){ //监听日期被切换
+                lay('#test2').html(value);
+            }//或 elem: document.getElementById('test')、elem: lay('#test') 等
+        });
+        //…
+    });
+</script>
+</body>
+</html>

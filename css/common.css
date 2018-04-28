@@ -1,0 +1,53 @@
+/*颜色类*/
+
+.avtive-color-btn-all {
+    background-color: #009688 !important;
+    color: #fff !important;
+}
+
+.avtive-color-text-all {
+    color: #009688 !important;
+}
+
+.search-btn {
+    background-color: #FF9966 !important;
+    color: #fff !important;
+}
+
+.highlight-text {
+    color: #FF9966 !important;
+}
+
+.highlight-bgc {
+    background-color: #FF9966 !important;
+}
+
+/*圆角类*/
+
+.btn-br-5 {
+    border-radius: 2px !important;
+}
+
+.pading-10 {
+    padding: 10px;
+}
+
+/*功能类*/
+
+.text-ddd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+.clearfloat {
+    zoom: 1;
+}
